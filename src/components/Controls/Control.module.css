@@ -1,0 +1,16 @@
+.Control {
+border-radius: 5%;
+border: black;
+width:  25%;
+margin: 0 auto;
+height: 200px;
+  float: left;
+  border-top: black;
+}
+.container {
+  width: 80%;
+  height: 200px;
+ margin: 0 auto;
+  text-align: center;
+}
+

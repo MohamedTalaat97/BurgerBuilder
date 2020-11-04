@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Burger.module.css'
-import BurgerIngredient from './BurgerIng/BurgerIngerdient'
+import BurgerIngredient from '../BurgerIng/BurgerIngerdient.js'
 
  const Burger = (props) => {
     const ingArray = Object.keys(props.ingredients);
@@ -9,7 +9,7 @@ import BurgerIngredient from './BurgerIng/BurgerIngerdient'
     return (
         <div className = {classes.Burger}>
             <BurgerIngredient ingredient= 'bread-top' number = {1} />
-            { empty ? <p> Add Ingredients</p> :ingArray.map((ing, i) => <BurgerIngredient ingredient = {ing}  number = {numArray[i]} />)}
+            { empty ? <p> Add Ingredients</p> :ingArray.map((ing, i) => <BurgerIngredient key = {ing} ingredient = {ing}  number = {numArray[i]} />)}
             <BurgerIngredient ingredient= 'bread-bottom'  number = {1} />
         </div>
     )
